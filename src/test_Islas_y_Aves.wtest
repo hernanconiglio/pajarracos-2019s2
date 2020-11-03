@@ -1,0 +1,38 @@
+import aves.*
+import islas.*
+
+describe "Test de islas y aves" {
+	
+	test "test de islas y aves"{
+		const aguiluchoColorado = new AguiluchoColorado()
+		const albatros = new Albatros()
+		const palomaTorcaza = new PalomaTorcaza()
+		albatros.irAlGimnasio()
+		const islaDeGuilligan = new Isla()
+		islaDeGuilligan.agregarAves(#{aguiluchoColorado,albatros,palomaTorcaza})
+		
+		assert.equals(580,aguiluchoColorado.fuerza())
+		assert.equals(1100,albatros.fuerza())
+		assert.equals(700,palomaTorcaza.fuerza())
+		assert.equals(4500,albatros.peso())
+		assert.equals(2380,islaDeGuilligan.fuerzaTotal())
+		assert.equals(#{aguiluchoColorado,palomaTorcaza},islaDeGuilligan.avesDebiles())
+		islaDeGuilligan.terremoto()
+		assert.equals(80,aguiluchoColorado.velocidad())
+		assert.equals(5300,albatros.peso())
+		assert.equals(500,palomaTorcaza.ira())
+		assert.equals(#{aguiluchoColorado},islaDeGuilligan.avesDebiles())
+		islaDeGuilligan.tormenta()
+		assert.equals(80,aguiluchoColorado.velocidad())
+		assert.equals(640,aguiluchoColorado.fuerza())
+		assert.equals(5300,albatros.peso())
+		assert.equals(500,palomaTorcaza.ira())		
+		
+	}	
+	
+	
+	
+	
+	
+}
+

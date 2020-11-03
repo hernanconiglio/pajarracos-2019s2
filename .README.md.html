@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>D:\carlos\educ\obj1\proyectos-2019s1\angryBirds\.README.md.html</title>
+<title>D:\d\Soft\wollok\workspace\pajarracos-2019s2\.README.md.html</title>
 
 
 <style type="text/css">
@@ -642,14 +642,18 @@ function setDocumentScrollTop(ypos)
 <h1> <a id="pajarracos" class="anchor" href="#pajarracos" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pajarracos</h1> 
 <p>Se nos pide desarrollar parte del modelo de un juego inspirado en el viejo Angry Birds. Las definiciones incluyen varias etapas en el desarrollo.</p> 
 <h2> <a id="algunas-aves" class="anchor" href="#algunas-aves" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Algunas aves</h2> 
-<p>En esta etapa tenemos que modelar algunas de las aves que pueden aparecer en el juego. De cada ave nos interesa saber su <em>fuerza</em> (que es un n&uacute;mero). Por otra parte, la din&aacute;mica del juego incluye circunstancias en las que un ave <em>recibe un disgusto</em>; para cada ave se define qu&eacute; debe hacer en tal caso.</p> 
+<p>En esta etapa tenemos que modelar algunas de las aves que pueden aparecer en el juego. De cada ave nos interesa saber su <strong>fuerza</strong> (que es un n&uacute;mero). Por otra parte, la din&aacute;mica del juego incluye circunstancias en las que un ave <strong>recibe un disgusto</strong>; para cada ave se define qu&eacute; debe hacer en tal caso.</p> 
 <p>Se definen tres especies de aves: aguiluchos, albatros y palomas.</p> 
-<p>Para los <strong>aguiluchos</strong>, la fuerza se calcula a partir de su velocidad. La velocidad inicial de un aguilucho es de 20 km/h. La <em>fuerza</em> de un aguilucho se define as&iacute;: si su velocidad es de 60 km/h o menos entonces es 180; en caso contrario, es el triple de la velocidad. Al <em>recibir un disgusto</em>, duplica su velocidad.<br /> O sea, un aguilucho cuya velocidad es 40 km/h tiene 180 de fuerza. Si recibe un disgusto, su velocidad pasa a 80 km/h, y por lo tanto, su fuerza se calcula como 240.</p> 
-<p>Para los <strong>albatros</strong>, la fuerza se define en base al peso y la masa muscular. Cuando se crea, un gorri&oacute;n pesa 4000 gramos, y tiene 600 de masa muscular. Su <em>fuerza</em> se calcula as&iacute;: si pesa menos de 6000 gramos, entonces coincide con la masa muscular medida en gramos; en caso contrario, es la mitad. Cuando <em>recibe un disgusto</em>, su peso aumenta en 800 gramos.<br /> Para los albatros se define una acci&oacute;n adicional que es <em>ir al gimnasio</em>: el efecto es que la masa muscular y el peso aumentan en 500 gramos.</p> 
-<p>Para las <strong>palomas</strong>, la fuerza se calcula a partir de su <em>ira</em>. Cuando se crea una paloma, su ira es de 200 unidades. La <em>fuerza</em> de una paloma es el doble de su ira. Cuando <em>recibe un disgusto</em>, su ira aumenta en 300 unidades.</p> 
+<h4> <a id="aguiluchos" class="anchor" href="#aguiluchos" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Aguiluchos</h4> 
+<p>De cada aguilucho se conoce su velocidad, que inicialmente es de 20 km/h pero puede variar en cualquier momento.<br /> La <strong>fuerza</strong> se calcula en base a su velocidad: si es de 60 km/h o menos entonces es 180; en caso contrario, es el triple de la velocidad. Al <strong>recibir un disgusto</strong>, duplica su velocidad.<br /> O sea, un aguilucho cuya velocidad es 40 km/h tiene 180 de fuerza. Si recibe un disgusto, su velocidad pasa a 80 km/h, y por lo tanto, su fuerza se calcula como 240.</p> 
+<h4> <a id="albatros" class="anchor" href="#albatros" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Albatros</h4> 
+<p>Para los albatros, la fuerza se define en base al peso y la masa muscular. Cuando se crea, un albatros pesa 4000 gramos, y tiene 600 de masa muscular.<br /> Su <strong>fuerza</strong> se calcula as&iacute;: si pesa menos de 6000 gramos, entonces coincide con la masa muscular; en caso contrario, es la mitad. Cuando <strong>recibe un disgusto</strong>, su peso aumenta en 800 gramos.<br /> Para los albatros se define una acci&oacute;n adicional que es <em>ir al gimnasio</em>: el efecto es que la masa muscular y el peso aumentan en 500 gramos.</p> 
+<h4> <a id="palomas" class="anchor" href="#palomas" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Palomas</h4> 
+<p>Para las palomas, la fuerza se calcula a partir de su ira. Cuando se crea una paloma, su ira es de 200 unidades.<br /> La <strong>fuerza</strong> de una paloma es el doble de su ira. Cuando <strong>recibe un disgusto</strong>, su ira aumenta en 300 unidades.</p> 
+<h2> <a id="aves-especiales" class="anchor" href="#aves-especiales" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Aves especiales</h2> 
 <p>Tambi&eacute;n debemos contemplar dos tipos especiales de aves: los aguiluchos colorados y las palomas torcazas.</p> 
 <p>La fuerza de un <strong>aguilucho colorado</strong> es de 400 unidades m&aacute;s de lo que corresponder&iacute;a seg&uacute;n el c&aacute;lculo de un aguilucho com&uacute;n de sus mismas caracter&iacute;sticas.</p> 
-<p>Para una <strong>paloma torcaza</strong>, la fuerza aumenta en 100 unidades para cada uno de sus huevos. Una paloma torcaza nace con 3 huevos. Cuando recibe un disgusto, adem&aacute;s de la acci&oacute;n com&uacute;n a todas las palomas, pone un huevo.</p> 
+<p>Para una <strong>paloma torcaza</strong>, la fuerza aumenta en 100 unidades por cada uno de sus huevos. Una paloma torcaza nace con 3 huevos. Cuando recibe un disgusto, adem&aacute;s de la acci&oacute;n com&uacute;n a todas las palomas, pone un huevo.</p> 
 <h2> <a id="islas" class="anchor" href="#islas" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Islas</h2> 
 <p>El mapa del juego incluye muchas <strong>islas</strong>. En cada isla hay aves.</p> 
 <p>Se pide modelar las islas, de forma de poder realizar lo que sigue:</p> 
@@ -669,24 +673,30 @@ function setDocumentScrollTop(ypos)
 <p>Verificar que</p> 
 <ul> 
  <li>la fuerza del aguilucho debe ser 580, la del albatros 1100, y la de la paloma 700 respectivamente.</li> 
- <li>el peso del aguilucho debe ser 4500.</li> 
+ <li>el peso del albatros debe ser 4500.</li> 
  <li>la fuerza total de la isla es 2380.</li> 
  <li>las aves d&eacute;biles de la isla son el aguilucho y la paloma.</li> 
 </ul> 
-<p>A partir de la situaci&oacute;n inicial, indicar que en la isla hubo un terremoto. Despu&eacute;s de esto, la velocidad del aguilucho debe aumentar a 40, el peso del albatros a 5300, y la ira de la paloma a 500. La fuerza del aguilucho sigue siendo 580, la del albatros sigue siendo 1100, la de la paloma pasa a 1400. Por lo tanto, la &uacute;nica ave d&eacute;bil es ahora el aguilucho.</p> 
+<p>A partir de la situaci&oacute;n inicial, indicar que en la isla hubo un terremoto. Despu&eacute;s de esto:</p> 
+<ul> 
+ <li>la velocidad del aguilucho debe aumentar a 40,</li> 
+ <li>el peso del albatros a 5300,</li> 
+ <li>y la ira de la paloma a 500.</li> 
+</ul> 
+<p>La fuerza del aguilucho sigue siendo 580, la del albatros sigue siendo 1100, la de la paloma pasa a 1400. Por lo tanto, la &uacute;nica ave d&eacute;bil es ahora el aguilucho.</p> 
 <p>Finalmente, indicar que en la isla hubo una tormenta despu&eacute;s del terremoto. La velocidad del aguilucho debe pasar a 80, y su fuerza a 640. El peso del albatros y la ira de la paloma deben ser igual que antes.<br /> Este &uacute;ltimo test se puede hacer tambi&eacute;n partiendo de la situaci&oacute;n inicial, e indicando un terremoto seguido de una tormenta.</p> 
 <h2> <a id="m&aacute;s-sobre-la-isla" class="anchor" href="#m%C3%A1s-sobre-la-isla" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>M&aacute;s sobre la isla</h2> 
 <p>Agregar a cada isla una cantidad de alpiste y una de ma&iacute;z, las dos nacen en 10.</p> 
-<p>Agregar dos nuevas consultas sobre la isla, su <em>ave capitana</em> y si <em>est&aacute; en paz</em> o no; y dos nuevas acciones, la <em>sesi&oacute;n de relax</em> y la <em>alimentaci&oacute;n</em>; y una consulta, .</p> 
+<p>Agregar dos nuevas consultas sobre la isla, su <em>ave capitana</em> y si <em>est&aacute; en paz</em> o no; y dos nuevas acciones, la <em>sesi&oacute;n de relax</em> y la <em>alimentaci&oacute;n</em>.</p> 
 <ul> 
- <li> <p>El <em>ave capitana</em> de una isla es la que tiene m&aacute;s fuerza, considerando solamente aquellas cuya fuerza est&eacute; entre 1000 y 3000.</p> </li> 
+ <li> <p>El <em>ave capitana</em> de una isla es la que tiene m&aacute;s fuerza, considerando solamente aquellas cuya fuerza est&eacute; entre 1000 y 3000. <strong>Ojo:</strong> un ave de 4000 nunca va a ser capitana, porque se excede de los 3000, tampoco una de 800 (ni aunque sean las m&aacute;s fuertes).</p> </li> 
  <li> <p>El efecto de una <em>sesi&oacute;n de relax</em> es indicarle a cada ave que <em>se relaje</em>. Qu&eacute; pasa con cada ave cuando se relaja:</p> 
   <ul> 
    <li>un aguilucho disminuye su velocidad en 10 km/h.</li> 
    <li>un albatros pierde 300 gramos de peso.</li> 
    <li>una paloma disminuye su ira en 50 unidades.</li> 
   </ul> </li> 
- <li> <p>La condici&oacute;n para que una isla <em>est&eacute; en paz</em> es todas las aves est&eacute;n conformes con la isla, de acuerdo a esta definici&oacute;n</p> 
+ <li> <p>La condici&oacute;n para que una isla <em>est&eacute; en paz</em> es que todas las aves est&eacute;n conformes con la isla, de acuerdo a esta definici&oacute;n</p> 
   <ul> 
    <li>un aguilucho est&aacute; conforme con una isla, si en la isla hay al menos 8 unidades de alpiste.</li> 
    <li>un albatros est&aacute; conforme con una isla, si en la isla hay a lo sumo 2 aves que tengan m&aacute;s fuerza que &eacute;l.</li> 
